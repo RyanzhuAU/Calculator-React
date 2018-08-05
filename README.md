@@ -22,3 +22,10 @@
 
 -	Use Chai lib to do the unit test.
 -	Have unit test for App.js and main logic.
+
+**Endpoint Issue**
+
+- When the input is invalid, the endpoint tried to return "NaN" value. For example, the request url is "http://calctest.iesim.biz/square_root?op1=-9".  
+- The response could not be converted to the JSON correctly. The result data is just a string "{ "result": NaN }".
+- So I just compare the response data with the following string directly. 
+(response.data === "{ \"result\": NaN }\n").  
