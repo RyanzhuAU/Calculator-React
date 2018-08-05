@@ -18,13 +18,21 @@ class App extends React.Component {
         calculate(this.state, buttonName)
             .then(state => {
                 this.setState(state);
-                console.log(state);
+                // console.log(state);
             })
     };
 
+    handleKeyPress = event => {
+        console.log(event);
+        calculate(this.state, event.key)
+            .then(state => {
+                this.setState(state);
+            })
+    }
+
     render() {
         return (
-            <div className="component-app">
+            <div className="component-app" onKeyPress={this.handleKeyPress}>
                 <Display value={this.state.next || this.state.total || "0"}/>
                 <ButtonPanel clickHandler={this.handleClick}/>
             </div>

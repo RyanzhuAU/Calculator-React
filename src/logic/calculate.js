@@ -11,7 +11,7 @@ import operate from "./operate";
  */
 export default function calculate(obj, buttonName) {
     var calculatePromise = new Promise((resolve, reject) => {
-        if (buttonName === "AC") {
+        if (buttonName === "AC" || buttonName === "Esc") {
             resolve({
                 total: null,
                 next: null,
@@ -20,7 +20,7 @@ export default function calculate(obj, buttonName) {
         }
 
         // if the user click a number button.
-        if (buttonName.length == 1 && !isNaN(buttonName)) {
+        if (buttonName.length === 1 && !isNaN(buttonName)) {
             if (buttonName === "0" && obj.next === "0") {
                 resolve({});
             }
@@ -67,7 +67,7 @@ export default function calculate(obj, buttonName) {
                 resolve({next: obj.next + "."});
             }
             resolve({next: "0."});
-        } else if (buttonName === "=") {
+        } else if (buttonName === "=" || buttonName === "Enter") {
             if (obj.next && obj.operation) {
                 operate(obj.total, obj.next, obj.operation)
                     .then(response => {
@@ -123,7 +123,7 @@ export default function calculate(obj, buttonName) {
                     operation: buttonName
                 })
             } else if (obj.next) {
-                throw Error(`Error occur during the calculation, please restart the calculation.`);
+                reject("Error occur during the calculation, please restart the calculation.");
             }
         } else {
             // save the operation and shift 'next' into 'total'

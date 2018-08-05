@@ -225,14 +225,14 @@ describe('Calculation test', () => {
             });
 
         state = {
-            total: "2.718281828459045",
+            total: "10",
             next: null,
             operation: null
         };
 
         calculate(state, "log")
             .then(response => {
-                expect(response.total).to.equal("2.718281828459045");
+                expect(response.total).to.equal("10");
                 expect(response.next).to.equal("1");
                 expect(response.operation).to.equal(null);
                 expect(response.specialOperation).to.equal(true);
