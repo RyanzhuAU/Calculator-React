@@ -13,7 +13,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -30,7 +33,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -47,7 +53,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -65,7 +74,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -83,7 +95,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -101,7 +116,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -119,7 +137,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -137,7 +158,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -155,7 +179,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
@@ -173,7 +200,10 @@ export default function operate(op1, op2, operation) {
                     adapter: httpAdapter
                 })
                 .then(response => {
-                    if (response != null && response.data != null) {
+                    if (response.data === "{ \"result\": NaN }\n"){
+                        //TODO error toast here
+                        alert("Invalid input.");
+                    } else if (response != null && response.data != null) {
                         resolve(response.data.result.toString());
                     } else {
                         resolve(0);
