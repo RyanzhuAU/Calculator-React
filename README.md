@@ -4,8 +4,9 @@
 
 -	Go to {application folder}
 -	Run “npm install” to install dependencies.
--	Run “npm start” to start the calculator application
 -	Run “npm run test” to run the unit test.
+-	Run “npm start” to start the calculator application
+-   The web-calculator should be launched automatically. If not, visit "http://localhost:3000/" in the browser.  
 
 **Implemented feature:**
 
